@@ -99,7 +99,12 @@ export function LinearGradient() {
 
     // Generate gradient for each segment picking colors from palette
     for (let i = 0, data = this._data; i < data.length; i++) {
-      gradient.addColorStop((i) / data.length, palette.getRGBColor(data[i][attr]));
+      if (i < data.length - 1) {
+        const dist = data[i + 1].dist - data[i].dist;
+        const totalDist = data[data.length - 1].dist - data[0].dist;
+        const offset = (data[i].dist - data[0].dist) / totalDist;
+        gradient.addColorStop(offset, palette.getRGBColor(data[i][attr]));
+      }
     }
 
   });
