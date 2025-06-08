@@ -59,13 +59,14 @@ export function LinearGradient() {
     };
   };
 
+  // Use slope as the attribute for coloring
   const { preferCanvas } = this.options;
   const { attr, path: path_name, range, min, max } = L.extend({
-    attr: 'z',
+    attr: 'slope', // <-- use 'slope' instead of 'z' or 'elevation'
     path: 'altitude',
-    range: { 0.0: '#008800', 0.5: '#ffff00', 1.0: '#ff0000' },
-    min: 'elevation_min',
-    max: 'elevation_max',
+    range: { 0:  '#008800', 0.5: '#008800', 0.6: '#ffff00', 0.8: '#ff0000', 1: '#ff0000' }, // example: green for negative/flat, yellow for uphill, red for steep
+    min: -25, // <-- set min slope value to -25
+    max: 25, // <-- max slope property
   }, (true === this.options.linearGradient) ? {} : this.options.linearGradient);
 
   const gradient_id = path_name + '-gradient-' + _.randomId();
@@ -80,8 +81,8 @@ export function LinearGradient() {
     const { defs } = chart._chart.utils;
 
     const palette = get_palette({
-      min: isFinite(this.track_info[min]) ? this.track_info[min] : 0,
-      max: isFinite(this.track_info[max]) ? this.track_info[max] : 1,
+      min,
+      max,
       range,
     });
 
