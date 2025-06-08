@@ -1,5 +1,5 @@
 {
-  "name": "@raruto/leaflet-elevation",
+  "name": "@goshawk22/leaflet-elevation",
   "version": "2.5.1",
   "description": "A Leaflet plugin that allows to add elevation profiles using d3js",
   "type": "module",
@@ -46,7 +46,7 @@
   ],
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/Raruto/leaflet-elevation/issues"
+    "url": "https://github.com/goshawk22/leaflet-elevation/issues"
   },
   "homepage": "https://github.com/Raruto/leaflet-elevation#readme",
   "devDependencies": {
