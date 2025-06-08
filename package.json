@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Raruto/leaflet-elevation.git"
+    "url": "https://github.com/goshawk22/leaflet-elevation.git"
   },
   "keywords": [
     "leaflet",
@@ -48,7 +48,7 @@
   "bugs": {
     "url": "https://github.com/goshawk22/leaflet-elevation/issues"
   },
-  "homepage": "https://github.com/Raruto/leaflet-elevation#readme",
+  "homepage": "https://github.com/goshawk22/leaflet-elevation#readme",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-json": "^6.0.0",
