@@ -3,11 +3,15 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonJS from '@rollup/plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import postcssImport from 'postcss-import';
+import json from '@rollup/plugin-json';
+import { createRequire } from 'node:module';
 
 // import postcssCopy from 'postcss-copy';
 // import rollupGitVersion from 'rollup-plugin-git-version';
 
-import plugin from '../package.json' assert { type: "json" };
+// FIX: Remove the import assertion and use the json plugin
+const require = createRequire(import.meta.url);
+const plugin = require('../package.json');
 
 let plugin_name = plugin.name.replace("@raruto/", "");
 

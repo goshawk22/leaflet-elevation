@@ -51,6 +51,7 @@
   "homepage": "https://github.com/Raruto/leaflet-elevation#readme",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-terser": "^0.4.1",
     "http-server": "^14.1.1",
