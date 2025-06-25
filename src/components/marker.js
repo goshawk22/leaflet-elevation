@@ -52,7 +52,7 @@ export var Marker = L.Class.extend({
 					let point = this._map.latLngToLayerPoint(this._latlng);
 					point     = L.extend({}, props.item, this._map._rotate ? this._map.rotatedPointToMapPanePoint(point) : point);
 
-					let yMax = (this.control._height() / props.yCoordMax * point[this.options.yAttr]);
+					let yMax = (this.control._height() / props.yCoordMax * point[this.options.yAttr]) / 4;
 
 					if (!isFinite(yMax) || isNaN(yMax)) yMax = 0;
 
